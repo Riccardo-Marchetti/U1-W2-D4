@@ -100,7 +100,6 @@ console.log(check3and7(14));
 /* SCRIVI QUI LA TUA RISPOSTA */
 const reverseString = function (s) {
   const splitString = s.split("");
-  ["E", "P", "I", "C", "O", "D", "E"];
   const splitString2 = splitString.reverse();
   return splitString;
 };
@@ -111,20 +110,34 @@ console.log(reverseString("EPICODE"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const upperFirst = function (p) {
-  const maiusc = p.toUpperCase(0, 1);
-  return maiusc;
+const upperFirst = function (sentence) {
+  const arrayOfWords = sentence.split(" ");
+  const arrayOfUpperCaseWords = [];
+  for (let i = 0; i < arrayOfWords.lenght; i++) {
+    let upperCasedWord =
+      arrayOfWords[i].slice(0, 1).touppercase() + arrayOfWords[i].slice(1);
+    arrayOfUpperCaseWords.push(arrayOfUpperCaseWords);
+    return arrayOfUpperCaseWords.join(" ");
+  }
 };
-console.log(upperFirst("ciao a tutti"));
+console.log(upperFirst("ciao mi chiamo stefano"));
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const cutString = function (l) {
+  return l.substring(1, l.length - 1);
+};
+console.log(cutString("ciao"));
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+// const giveMeRandom = function (n) {
+//   const numeriR = [math.floor(math.random() * 11)];
+//   return numeriR + 1;
+// };
+// console.log(giveMeRandom());
